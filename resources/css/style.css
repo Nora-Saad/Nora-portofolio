@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
 @keyframes slideInFromLeft {
     0% {
       transform: translateX(-100%);
@@ -7,28 +14,31 @@
     }
   }
   
-
-  
 #intro{
     border: 5px double blue;
     border-radius:3px;
-    width:700px;
-    height:400px; 
+    width:50%;
+    height:60%; 
     display:flex;
     flex-direction: row;
-    flex-basis: 50%;
-margin: auto auto;    
+    margin: auto auto;    
     background-color: burlywood;
     animation: slideInFromLeft;
     animation-duration: 2s;
     
 
 }
-
-#intro img{
-    max-width:100%;
-    max-height:100%;
+@media only screen and (max-width: 1200px) {
+#intro{
+    display:flex;
+    flex-direction: column;   
 }
+#intro img{
+width:100%;
+height:50%;
+}
+}
+
 
 #intro h1{
     text-align: center;
@@ -38,7 +48,14 @@ margin: auto auto;
     margin:20px;
     padding:10px;
 }
-
+#name #icon{
+    width:50px;
+    height:50px;
+    position: fixed;
+    top:10px;
+    right:5px;
+    background-color: rgba(68, 23, 23, 0.8);
+}
 #name h1:hover{
 transition:font-size color;
 font-size: 50px;
@@ -46,7 +63,7 @@ color:chartreuse;
 }
 
 #introB{
-    width:100%;
+    width:100vw;
     height:100vh;
     background-color: rgba(0, 0, 0, 0.8);
     display:flex;
