@@ -1,6 +1,14 @@
+window.onload = function () {
+    var icon = document.getElementById("icon");
+  var introB = document.getElementById("introB");
 
-document.onreadystatechange = function(){
-    if(document.readyState=='loaded' || document.readyState=='complete')
-        
-       
-}
+    if (icon) {
+      icon.addEventListener('click', skriv);
+    }
+  
+    function skriv() {
+     introB.style.display = "none";
+      
+    }
+  }
+
